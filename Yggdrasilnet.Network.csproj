@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\Yggdrasilnet.Gameplay\Yggdrasilnet.Gameplay.csproj" />
     <ProjectReference Include="..\Yggdrasilnet.Maths\Yggdrasilnet.Maths.csproj" />
   </ItemGroup>
 
