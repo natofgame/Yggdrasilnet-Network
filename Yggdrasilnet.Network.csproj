@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Yggdrasilnet.Gameplay\Yggdrasilnet.Gameplay.csproj" />
+    <ProjectReference Include="..\Yggdrasilnet.Maths\Yggdrasilnet.Maths.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LiteNetLib" Version="2.1.4" />
+    <PackageReference Include="PolySharp" Version="1.16.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
