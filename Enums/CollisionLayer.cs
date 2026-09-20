@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Yggdrasilnet.Gameplay.Enums;
+namespace Yggdrasilnet.Network.Enums;
 
 [Flags]
 public enum CollisionLayer : uint {
