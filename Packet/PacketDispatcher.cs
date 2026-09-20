@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using LiteNetLib;
-using Yggdrasilnet.Network.Packet;
 
-namespace Yggdrasilnet.Network;
+namespace Yggdrasilnet.Network.Packet;
 
 public sealed class PacketDispatcher<TContext> {
     private readonly Dictionary<PacketType, Action<NetPeer, IPacket, TContext>> _handlers = new();
