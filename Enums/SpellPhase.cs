@@ -1,4 +1,4 @@
-﻿namespace Yggdrasilnet.Gameplay.Enums;
+﻿namespace Yggdrasilnet.Network.Enums;
 
 public enum SpellPhase : byte {
     None = 0,

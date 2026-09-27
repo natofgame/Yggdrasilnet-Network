@@ -1,5 +1,6 @@
 ﻿using LiteNetLib.Utils;
 using Yggdrasilnet.Gameplay.Enums;
+using Yggdrasilnet.Network.Enums;
 
 namespace Yggdrasilnet.Network.Packet.Snapshot.Components;
 

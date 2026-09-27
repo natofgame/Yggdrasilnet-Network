@@ -1,5 +1,4 @@
 using LiteNetLib.Utils;
-using Yggdrasilnet.Protocol.Packet;
 
 namespace Yggdrasilnet.Network.Packet.Packets;
 

@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using LiteNetLib.Utils;
-using Yggdrasilnet.Protocol.Packet.Snapshot;
 
 namespace Yggdrasilnet.Network.Packet.Snapshot;
 

@@ -7,4 +7,5 @@ public enum NetworkedComponentType : byte {
     Projectile = 4,
     Collision = 5,
     Direction = 6,
+    Target = 7
 }

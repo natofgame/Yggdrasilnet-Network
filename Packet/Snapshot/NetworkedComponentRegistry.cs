@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Yggdrasilnet.Network.Packet.Snapshot;
 using Yggdrasilnet.Network.Packet.Snapshot.Components;
 
-namespace Yggdrasilnet.Protocol.Packet.Snapshot;
+namespace Yggdrasilnet.Network.Packet.Snapshot;
 
 public sealed class NetworkedComponentRegistry {
     private static readonly Lazy<NetworkedComponentRegistry> DefaultInstance = new(CreateDefault);
@@ -18,6 +17,7 @@ public sealed class NetworkedComponentRegistry {
         registry.Register(NetworkedComponentType.Projectile, () => new ProjectileComponent());
         registry.Register(NetworkedComponentType.Collision, () => new CollisionComponent());
         registry.Register(NetworkedComponentType.Direction, (() => new DirectionComponent()));
+        registry.Register(NetworkedComponentType.Target, () => new TargetComponent());
         return registry;
     }
 
