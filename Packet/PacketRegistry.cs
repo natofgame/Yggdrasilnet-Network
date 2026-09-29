@@ -10,7 +10,6 @@ public sealed class PacketRegistry {
 
     public PacketRegistry() {
         Register(PacketType.PlayerConnexion, () => new PlayerConnexionPacket());
-        Register(PacketType.Snapshot, () => new SnapshotPacket());
         Register(PacketType.SnapshotChunk, () => new SnapshotChunkPacket());
         Register(PacketType.Input, () => new InputPacket());
         Register(PacketType.SpawnEntities, () => new SpawnEntitiesPacket());
@@ -35,19 +34,31 @@ public sealed class PacketRegistry {
     }
 
     public bool TryRead(NetDataReader reader, out IPacket packet) {
+        packet = null!;
+
+        if (reader.AvailableBytes < 1) {
+            return false;
+        }
+
         var typeByte = reader.GetByte();
-
         if (!Enum.IsDefined(typeof(PacketType), typeByte)) {
-            packet = null!;
             return false;
         }
 
-        var type = (PacketType)typeByte;
-        if (!TryCreate(type, out packet)) {
+        if (!TryCreate((PacketType)typeByte, out var created)) {
             return false;
         }
 
-        packet.Deserialize(reader);
+        try {
+            created.Deserialize(reader);
+        } catch (Exception ex) when (ex is PacketFormatException
+                                         or IndexOutOfRangeException
+                                         or ArgumentException
+                                         or InvalidOperationException) {
+            return false;
+        }
+
+        packet = created;
         return true;
     }
 

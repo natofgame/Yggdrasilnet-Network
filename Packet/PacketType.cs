@@ -1,13 +1,12 @@
 namespace Yggdrasilnet.Network.Packet;
 
 public enum PacketType : byte {
-    Snapshot = 0, 
-    PlayerConnexion = 1,
-    Input = 2,
-    SpawnEntities = 3,
-    Stats = 4,
-    SnapshotChunk = 5,
-    EntityDefinitions = 6,
-    CastSpell = 7,
-    DespawnEntities = 8
+    PlayerConnexion = 0,
+    Input = 1,
+    SpawnEntities = 2,
+    Stats = 3,
+    SnapshotChunk = 4,
+    EntityDefinitions = 5,
+    CastSpell = 6,
+    DespawnEntities = 7
 }

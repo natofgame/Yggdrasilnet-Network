@@ -5,33 +5,48 @@ using Yggdrasilnet.Network.Packet.Snapshot;
 namespace Yggdrasilnet.Network.Packet.Packets;
 
 public sealed class SnapshotChunkPacket : IPacket {
+    public const int MaxChunksPerFrame = 64;
+    public const int MaxEntitiesPerChunk = 256;
+
     public PacketType PacketType => PacketType.SnapshotChunk;
 
     public uint FrameId { get; set; }
+    public bool IsKeyframe { get; set; }
     public ushort ChunkIndex { get; set; }
-    public bool IsLastChunk { get; set; }
-    public List<EntitySnapshot> Entities { get; set; } = new();
+    public ushort ChunkCount { get; set; }
+    public List<EntitySnapshot> Entities { get; } = new();
 
     public void Serialize(NetDataWriter writer) {
         writer.Put(FrameId);
+        writer.Put(IsKeyframe);
         writer.Put(ChunkIndex);
-        writer.Put(IsLastChunk);
-
+        writer.Put(ChunkCount);
         writer.Put((ushort)Entities.Count);
-        foreach (var entity in Entities) {
-            entity.WriteTo(writer);
-        }
+        foreach (var e in Entities) e.WriteTo(writer);
     }
 
     public void Deserialize(NetDataReader reader) {
+        if (reader.AvailableBytes < 4 + 1 + 2 + 2 + 2) {
+            throw new PacketFormatException("chunk header");
+        }
+
         FrameId = reader.GetUInt();
+        IsKeyframe = reader.GetBool();
         ChunkIndex = reader.GetUShort();
-        IsLastChunk = reader.GetBool();
+        ChunkCount = reader.GetUShort();
+        if (ChunkCount == 0 || ChunkCount > MaxChunksPerFrame || ChunkIndex >= ChunkCount) {
+            throw new PacketFormatException("chunk index/count");
+        }
+
+        int count = reader.GetUShort();
+        if (count > MaxEntitiesPerChunk) throw new PacketFormatException("entity count");
 
         Entities.Clear();
-        var count = reader.GetUShort();
         for (var i = 0; i < count; i++) {
-            Entities.Add(EntitySnapshot.ReadFrom(reader, NetworkedComponentRegistry.Default));
+            if (!EntitySnapshot.TryReadFrom(reader, NetworkedComponentRegistry.Default, out var e)) {
+                throw new PacketFormatException("entity");
+            }
+            Entities.Add(e);
         }
     }
 }
