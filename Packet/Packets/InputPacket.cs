@@ -16,10 +16,23 @@ public sealed class InputPacket : IPacket {
         writer.Put(MoveZ);
         writer.Put(DeltaTime);
     }
+
     public void Deserialize(NetDataReader reader) {
+        const int payloadBytes = sizeof(uint) + sizeof(float) + sizeof(float) + sizeof(float);
+        if (reader.AvailableBytes < payloadBytes) {
+            throw new PacketFormatException("input payload too short");
+        }
+
         Sequence = reader.GetUInt();
         MoveX = reader.GetFloat();
         MoveZ = reader.GetFloat();
         DeltaTime = reader.GetFloat();
+
+        if (float.IsNaN(MoveX) || float.IsInfinity(MoveX)
+            || float.IsNaN(MoveZ) || float.IsInfinity(MoveZ)
+            || float.IsNaN(DeltaTime) || float.IsInfinity(DeltaTime)
+            || DeltaTime < 0f) {
+            throw new PacketFormatException("input payload invalid values");
+        }
     }
 }

@@ -3,6 +3,9 @@ using LiteNetLib.Utils;
 namespace Yggdrasilnet.Network.Packet.Packets;
 
 public sealed class StatsPacket : IPacket {
+    private const int PayloadBytes =
+        sizeof(float) + sizeof(int) + sizeof(int) + sizeof(int) + sizeof(float) + sizeof(float) + sizeof(float);
+
     public PacketType PacketType => PacketType.Stats;
 
     public float ActualTps { get; set; }
@@ -24,6 +27,10 @@ public sealed class StatsPacket : IPacket {
     }
 
     public void Deserialize(NetDataReader reader) {
+        if (reader.AvailableBytes < PayloadBytes) {
+            throw new PacketFormatException("stats payload too short");
+        }
+
         ActualTps = reader.GetFloat();
         TargetTps = reader.GetInt();
         EntityCount = reader.GetInt();
@@ -31,5 +38,16 @@ public sealed class StatsPacket : IPacket {
         AvgTickMs = reader.GetFloat();
         MaxTickMs = reader.GetFloat();
         BudgetMs = reader.GetFloat();
+
+        if (float.IsNaN(ActualTps) || float.IsInfinity(ActualTps)
+            || float.IsNaN(AvgTickMs) || float.IsInfinity(AvgTickMs)
+            || float.IsNaN(MaxTickMs) || float.IsInfinity(MaxTickMs)
+            || float.IsNaN(BudgetMs) || float.IsInfinity(BudgetMs)) {
+            throw new PacketFormatException("stats payload invalid float values");
+        }
+
+        if (TargetTps < 0 || EntityCount < 0 || PlayerCount < 0 || AvgTickMs < 0f || MaxTickMs < 0f || BudgetMs < 0f) {
+            throw new PacketFormatException("stats payload invalid numeric ranges");
+        }
     }
 }
