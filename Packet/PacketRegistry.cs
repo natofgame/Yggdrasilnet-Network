@@ -17,6 +17,7 @@ public sealed class PacketRegistry {
         Register(PacketType.EntityDefinitions, () => new EntityDefinitionsPacket());
         Register(PacketType.CastSpell, () => new CastSpellPacket());
         Register(PacketType.DespawnEntities, () => new DespawnEntitiesPacket());
+        Register(PacketType.SpellbookState, () => new SpellbookStatePacket());
     }
 
     public void Register(PacketType type, Func<IPacket> factory) {
