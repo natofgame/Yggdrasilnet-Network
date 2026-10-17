@@ -1,6 +1,6 @@
 using Yggdrasilnet.NetworkV4.Protocol;
 
-namespace Yggdrasilnet.NetworkV4.Packets;
+namespace Yggdrasilnet.NetworkV4.Packets.Command;
 
 /// <summary>
 ///  Packet sent by the client to get the completions of the command being typed.

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Yggdrasilnet.NetworkV4.Protocol;
 
-namespace Yggdrasilnet.NetworkV4.Packets;
+namespace Yggdrasilnet.NetworkV4.Packets.Command;
 
 /// <summary>
 ///  Completions for a <see cref="CommandSuggestionRequestPacket" />.

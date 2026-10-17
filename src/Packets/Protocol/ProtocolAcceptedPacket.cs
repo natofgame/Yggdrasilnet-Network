@@ -1,6 +1,6 @@
 using Yggdrasilnet.NetworkV4.Protocol;
 
-namespace Yggdrasilnet.NetworkV4.Packets;
+namespace Yggdrasilnet.NetworkV4.Packets.Protocol;
 
 /// <summary>
 ///  Packet for a protocol accepted.

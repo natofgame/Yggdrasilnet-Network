@@ -1,5 +1,6 @@
 using LiteNetLib.Utils;
 using Yggdrasilnet.NetworkV4.Packets;
+using Yggdrasilnet.NetworkV4.Packets.Protocol;
 
 namespace Yggdrasilnet.NetworkV4.Protocol.V1.Serializer;
 
