@@ -8,6 +8,7 @@ namespace Yggdrasilnet.NetworkV4.Packets;
 ///  Packet for a snapshot chunk.
 /// </summary>
 public sealed class SnapshotChunkPacket : IGamePacket {
+    public const int HeaderBytes = 12;
     public const int MaxChunksPerFrame = 64;
     public const int MaxEntitiesPerChunk = 256;
 
