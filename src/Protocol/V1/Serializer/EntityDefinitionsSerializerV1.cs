@@ -20,7 +20,7 @@ public sealed class EntityDefinitionsSerializerV1 : IPacketSerializer<EntityDefi
             writer.Put(entry.DefinitionId);
         }
     }
-
+ 
     /// <inheritdoc/>
     public void Deserialize(EntityDefinitionsPacket packet, ProtocolHelper helper, NetDataReader reader) {
         if (reader.AvailableBytes < HeaderBytes) {
