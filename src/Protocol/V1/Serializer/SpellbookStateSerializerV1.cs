@@ -7,7 +7,7 @@ namespace Yggdrasilnet.Network.Protocol.V1.Serializer;
 ///  Serializer for a spellbook state packet.
 /// </summary>
 public sealed class SpellbookStateSerializerV1 : IPacketSerializer<SpellbookStatePacket> {
-    // TODO: make this configurable
+    // Wire format limits of protocol V1: client and server must agree on them, so they are not configurable.
     private const int HeaderBytes = sizeof(int) + sizeof(ushort);
     private const int MinEntryBytes = sizeof(byte) + sizeof(ushort) + sizeof(float) + sizeof(int) + sizeof(int);
     private const int MaxEntries = 64;

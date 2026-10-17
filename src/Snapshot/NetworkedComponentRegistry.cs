@@ -5,10 +5,9 @@ using Yggdrasilnet.Network.Snapshot.Components;
 
 namespace Yggdrasilnet.Network.Snapshot;
 
-// TODO: Refacto
-
 /// <summary>
-///  Registry for networked components.
+///  Registry for networked components. Maps each <see cref="NetworkedComponentType" /> to a factory,
+///  so snapshots can be deserialized without knowing the concrete component types.
 /// </summary>
 public sealed class NetworkedComponentRegistry {
     private readonly Dictionary<NetworkedComponentType, Func<INetworkedComponent>> _factories = new();
@@ -57,7 +56,7 @@ public sealed class NetworkedComponentRegistry {
             return true;
         }
 
-        component = null!;
+        component = null;
         return false;
     }
 }

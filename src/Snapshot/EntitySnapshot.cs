@@ -4,10 +4,24 @@ using LiteNetLib.Utils;
 
 namespace Yggdrasilnet.Network.Snapshot;
 
+/// <summary>
+///  Snapshot of one entity, as sent in a snapshot chunk.
+/// </summary>
+/// <remarks>
+///  The sizes below describe the V1 wire format. Client and server must agree on them,
+///  so they are protocol constants and not configuration.
+/// </remarks>
 public sealed class EntitySnapshot {
-    // TODO: Moove to config
-    public const int HeaderBytes = 23;
-    public const int ComponentHeaderBytes = 3;
+    /// <summary>
+    ///  Entity header: id, position (x, y, z), last input sequence, definition id, component count.
+    /// </summary>
+    public const int HeaderBytes = sizeof(int) + 3 * sizeof(float) + sizeof(uint) + sizeof(byte) + sizeof(ushort);
+
+    /// <summary>
+    ///  Component header: component type, payload length.
+    /// </summary>
+    public const int ComponentHeaderBytes = sizeof(byte) + sizeof(ushort);
+
     private const int MaxComponentsPerEntity = 32;
 
     /// <summary>
