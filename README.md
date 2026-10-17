@@ -17,7 +17,7 @@ The library provides a networking infrastructure for the Yggdrasilnet server and
 
 ## ⚙️ Technical Specifications
 
-- 🎯 **Target Framework**: .NET 10.0
+- 🎯 **Target Framework**: .NET Standard 2.1
 - 📡 **Networking**: Powered by `LiteNetLib`.
 - 🧩 **Core Architecture**: ECS-like component management system.
 
@@ -28,19 +28,3 @@ The library provides a networking infrastructure for the Yggdrasilnet server and
 ```bash
 dotnet build Yggdrasilnet.Server.csproj
 ```
-
-## 🤝 Contributors
-
-Thanks to the following people who have contributed to this project:
-
-<table align="left">
-  <tr>
-    <td align="center">
-      <a href="https://github.com/natof">
-        <img src="https://wsrv.nl/?url=https://avatars.githubusercontent.com/u/80003956&w=120&h=120&fit=cover&mask=roundrect" width="90" alt="Natof" />
-      </a>
-      <br />
-      <b>Natof</b>
-    </td>
-  </tr>
-</table>
