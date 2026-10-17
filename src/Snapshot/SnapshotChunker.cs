@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Yggdrasilnet.NetworkV4.Packets;
+using Yggdrasilnet.Network.Packets;
 
-namespace Yggdrasilnet.NetworkV4.Snapshot;
+namespace Yggdrasilnet.Network.Snapshot;
 
 /// <summary>
 ///  Splits a snapshot into chunks.

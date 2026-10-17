@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Yggdrasilnet.NetworkV4.Protocol;
+using Yggdrasilnet.Network.Protocol;
 
-namespace Yggdrasilnet.NetworkV4.Packets;
+namespace Yggdrasilnet.Network.Packets;
 
 /// <summary>
 ///  Packet for despawn entities.

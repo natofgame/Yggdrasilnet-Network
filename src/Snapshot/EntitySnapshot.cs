@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using LiteNetLib.Utils;
 
-namespace Yggdrasilnet.NetworkV4.Snapshot;
+namespace Yggdrasilnet.Network.Snapshot;
 
 public sealed class EntitySnapshot {
     // TODO: Moove to config

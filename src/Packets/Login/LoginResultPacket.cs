@@ -1,6 +1,6 @@
-using Yggdrasilnet.NetworkV4.Protocol;
+using Yggdrasilnet.Network.Protocol;
 
-namespace Yggdrasilnet.NetworkV4.Packets.Login;
+namespace Yggdrasilnet.Network.Packets.Login;
 
 public class LoginResultPacket : IGamePacket {
     public bool Success { get; set; }

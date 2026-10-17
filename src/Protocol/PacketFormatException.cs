@@ -1,6 +1,6 @@
 using System;
 
-namespace Yggdrasilnet.NetworkV4.Protocol;
+namespace Yggdrasilnet.Network.Protocol;
 
 /// <summary>
 ///  Exception thrown when a packet is formatted incorrectly.

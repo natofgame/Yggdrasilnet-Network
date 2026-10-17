@@ -1,7 +1,7 @@
 using LiteNetLib.Utils;
-using Yggdrasilnet.NetworkV4.Protocol;
+using Yggdrasilnet.Network.Protocol;
 
-namespace Yggdrasilnet.NetworkV4.Codec;
+namespace Yggdrasilnet.Network.Codec;
 
 /// <summary>
 ///  Codec for packets.

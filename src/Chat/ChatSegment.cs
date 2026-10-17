@@ -1,4 +1,4 @@
-namespace Yggdrasilnet.NetworkV4.Chat;
+namespace Yggdrasilnet.Network.Chat;
 
 /// <summary>
 ///  A piece of chat text drawn in a single color.

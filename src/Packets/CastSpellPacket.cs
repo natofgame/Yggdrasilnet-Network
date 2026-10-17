@@ -1,6 +1,6 @@
-using Yggdrasilnet.NetworkV4.Protocol;
+using Yggdrasilnet.Network.Protocol;
 
-namespace Yggdrasilnet.NetworkV4.Packets;
+namespace Yggdrasilnet.Network.Packets;
 
 /// <summary>
 ///  Packet for casting a spell.

@@ -1,6 +1,6 @@
 using System;
 
-namespace Yggdrasilnet.NetworkV4.Enums;
+namespace Yggdrasilnet.Network.Enums;
 
 /// <summary>
 ///  Represents a collision layer.

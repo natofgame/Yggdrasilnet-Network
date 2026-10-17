@@ -1,4 +1,4 @@
-namespace Yggdrasilnet.NetworkV4.Chat;
+namespace Yggdrasilnet.Network.Chat;
 
 /// <summary>
 ///  Chat colors, same palette and order as Minecraft (code <c>~0</c> to <c>~f</c>).

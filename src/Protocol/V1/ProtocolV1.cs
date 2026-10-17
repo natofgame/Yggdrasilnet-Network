@@ -1,6 +1,6 @@
-using Yggdrasilnet.NetworkV4.Protocol.V1.Serializer;
+using Yggdrasilnet.Network.Protocol.V1.Serializer;
 
-namespace Yggdrasilnet.NetworkV4.Protocol.V1;
+namespace Yggdrasilnet.Network.Protocol.V1;
 
 /// <summary>
 ///  Protocol V1.

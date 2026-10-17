@@ -1,4 +1,4 @@
-namespace Yggdrasilnet.NetworkV4.Snapshot;
+namespace Yggdrasilnet.Network.Snapshot;
 
 /// <summary>
 ///  Types of networked components.

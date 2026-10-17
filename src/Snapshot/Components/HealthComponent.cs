@@ -1,6 +1,6 @@
 using LiteNetLib.Utils;
 
-namespace Yggdrasilnet.NetworkV4.Snapshot.Components;
+namespace Yggdrasilnet.Network.Snapshot.Components;
 
 public sealed class HealthComponent : INetworkedComponent {
     /// <inheritdoc/>

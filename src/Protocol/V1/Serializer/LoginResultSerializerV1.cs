@@ -1,7 +1,7 @@
 using LiteNetLib.Utils;
-using Yggdrasilnet.NetworkV4.Packets.Login;
+using Yggdrasilnet.Network.Packets.Login;
 
-namespace Yggdrasilnet.NetworkV4.Protocol.V1.Serializer;
+namespace Yggdrasilnet.Network.Protocol.V1.Serializer;
 
 /// <summary>
 ///  Serializer for a login result packet.

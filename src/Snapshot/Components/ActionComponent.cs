@@ -1,7 +1,7 @@
 using LiteNetLib.Utils;
-using Yggdrasilnet.NetworkV4.Enums;
+using Yggdrasilnet.Network.Enums;
 
-namespace Yggdrasilnet.NetworkV4.Snapshot.Components;
+namespace Yggdrasilnet.Network.Snapshot.Components;
 
 public sealed class ActionComponent : INetworkedComponent {
     /// <inheritdoc/>

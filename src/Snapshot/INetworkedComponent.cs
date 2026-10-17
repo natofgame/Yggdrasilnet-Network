@@ -1,6 +1,6 @@
 using LiteNetLib.Utils;
 
-namespace Yggdrasilnet.NetworkV4.Snapshot;
+namespace Yggdrasilnet.Network.Snapshot;
 
 /// <summary>
 ///  Represents a networked component.

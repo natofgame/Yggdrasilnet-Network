@@ -1,6 +1,6 @@
 using LiteNetLib.Utils;
 
-namespace Yggdrasilnet.NetworkV4.Protocol;
+namespace Yggdrasilnet.Network.Protocol;
 
 /// <summary>
 ///  Serializer for a packet.

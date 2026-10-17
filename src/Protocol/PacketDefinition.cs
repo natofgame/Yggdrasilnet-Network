@@ -1,7 +1,7 @@
 using System;
 using LiteNetLib.Utils;
 
-namespace Yggdrasilnet.NetworkV4.Protocol;
+namespace Yggdrasilnet.Network.Protocol;
 
 /// <summary>
 ///  Definition of a packet.

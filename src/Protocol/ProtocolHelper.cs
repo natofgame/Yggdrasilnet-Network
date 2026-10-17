@@ -2,7 +2,7 @@ using System;
 using System.Numerics;
 using LiteNetLib.Utils;
 
-namespace Yggdrasilnet.NetworkV4.Protocol;
+namespace Yggdrasilnet.Network.Protocol;
 
 /// <summary>
 ///  Helper class for protocols.

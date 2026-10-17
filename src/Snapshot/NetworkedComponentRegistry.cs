@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using Yggdrasilnet.NetworkV4.Snapshot.Components;
+using Yggdrasilnet.Network.Snapshot.Components;
 
-namespace Yggdrasilnet.NetworkV4.Snapshot;
+namespace Yggdrasilnet.Network.Snapshot;
 
 // TODO: Refacto
 

@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using Yggdrasilnet.NetworkV4.Protocol.V1;
+using Yggdrasilnet.Network.Protocol.V1;
 
-namespace Yggdrasilnet.NetworkV4.Protocol;
+namespace Yggdrasilnet.Network.Protocol;
 
 /// <summary>
 ///  Registry for protocols.

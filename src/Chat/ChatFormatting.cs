@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Yggdrasilnet.NetworkV4.Chat;
+namespace Yggdrasilnet.Network.Chat;
 
 /// <summary>
 ///  Minecraft-like color codes for chat text: <c>~</c> followed by <c>0-9</c> / <c>a-f</c> sets the color,

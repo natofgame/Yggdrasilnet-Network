@@ -1,8 +1,8 @@
 using LiteNetLib.Utils;
-using Yggdrasilnet.NetworkV4.Packets;
-using Yggdrasilnet.NetworkV4.Snapshot;
+using Yggdrasilnet.Network.Packets;
+using Yggdrasilnet.Network.Snapshot;
 
-namespace Yggdrasilnet.NetworkV4.Protocol.V1.Serializer;
+namespace Yggdrasilnet.Network.Protocol.V1.Serializer;
 
 /// <summary>
 ///  Serializer for a snapshot chunk packet.

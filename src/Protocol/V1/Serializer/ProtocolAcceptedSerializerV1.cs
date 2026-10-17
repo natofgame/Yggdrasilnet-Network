@@ -1,8 +1,8 @@
 using LiteNetLib.Utils;
-using Yggdrasilnet.NetworkV4.Packets;
-using Yggdrasilnet.NetworkV4.Packets.Protocol;
+using Yggdrasilnet.Network.Packets;
+using Yggdrasilnet.Network.Packets.Protocol;
 
-namespace Yggdrasilnet.NetworkV4.Protocol.V1.Serializer;
+namespace Yggdrasilnet.Network.Protocol.V1.Serializer;
 
 /// <summary>
 ///  Serializer for a protocol accepted packet.
