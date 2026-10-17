@@ -16,6 +16,8 @@ public static class ProtocolV1 {
         .RegisterPacket(0x00, new RequestProtocolSerializerV1())
         .RegisterPacket(0x01, new InputSerializerV1())
         .RegisterPacket(0x02, new CastSpellSerializerV1())
+        .RegisterPacket(0x03, new LoginSerializerV1())
+        .RegisterPacket(0x04, new CommandSuggestionRequestSerializerV1())
         .RegisterPacket(0x80, new ProtocolAcceptedSerializerV1())
         .RegisterPacket(0x81, new PlayerConnexionSerializerV1())
         .RegisterPacket(0x82, new EntityDefinitionsSerializerV1())
@@ -24,5 +26,8 @@ public static class ProtocolV1 {
         .RegisterPacket(0x85, new StatsSerializerV1())
         .RegisterPacket(0x86, new SpellbookStateSerializerV1())
         .RegisterPacket(0x87, new CommandSerializerV1())
+        .RegisterPacket(0x88, new ChatPacketSerializerV1())
+        .RegisterPacket(0x89, new LoginResultSerializerV1())
+        .RegisterPacket(0x8A, new CommandSuggestionResponseSerializerV1())
         .Build();
 }
